@@ -42,6 +42,7 @@ class Weather(BaseModel):
 
     temp: Temp
     feels_like: FeelsLike
+    humidity: int
     wind_speed: float
 
     weather: List[WeatherDesc]
@@ -99,3 +100,12 @@ class WeatherAPI:
         res = weather_by_day[today]
 
         return Weather.parse_obj(res)
+
+
+class GeoWeatherAPI:
+    def __init__(self, mapquest_key: str, openweathermap_key: str):
+        self.geo = GeocodingAPI(mapquest_key)
+        self.weather = WeatherAPI(openweathermap_key)
+
+    def get_today_weather_for_address(self, address: str) -> Weather:
+        return self.weather.get_weather_today(self.geo.get_coordinates(address))
