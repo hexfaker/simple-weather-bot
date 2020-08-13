@@ -1,0 +1,10 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "simple-weather-bot"
+  project_description: "Simple bot telling weather and recommending clothes"
+  organization: "Vsevolod Poletaev"
+  license: "MIT"
+  version: "0.1.0"
+  github_name: "hexfaker"
+  email: "poletaev.va [at] gmail.com"
