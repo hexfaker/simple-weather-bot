@@ -38,6 +38,11 @@ typer = {extras = ["all"], version = "^0.2.1"}
 rich = "^2.2.2"
 pre-commit = "^2.5.1"
 httpx = "^0.14.1"
+pydantic = "^1.6.1"
+python-dotenv = "^0.14.0"
+pytz = "^2020.1"
+coloredlogs = "^14.0"
+python-telegram-bot = "^12.8"
 
 [tool.poetry.dev-dependencies]
 darglint = "^1.4.1"
