@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  bot:
+    build:
+      context: .
+    env_file:
+      - default.env
+    command: run_bot
+
+  show:
+    build:
+      context: .
+    env_file:
+      - default.env
+    entrypoint: python -m simple_weather_bot show
